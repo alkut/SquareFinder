@@ -1,0 +1,8 @@
+./idea
+./packages
+SquareFinder.sln.DotSettings.user
+*.dll
+*.pdb
+./bin
+./obj
+
