@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Reflection;
+using System.Linq;
 using SquareFinder.Figures;
 
 
@@ -38,14 +38,24 @@ namespace RunTime
             int side2 = Int32.Parse(Console.ReadLine());
             int side3 = Int32.Parse(Console.ReadLine());
 
-            if (type.Equals("Triangle"))
+            if (type.Equals("Triangle") || type.Equals("MockTriangle"))
             {
-                Console.WriteLine($"square is {SquareFinder.SquareFinder.FindSquare(typeof(Triangle), side1, side2, side3)}");
+                Console.WriteLine($"square is {SquareFinder.SquareFinder.FindSquare(GetTypeByName(type), side1, side2, side3)}");
             }
-            else if (type.Equals("MockTriangle"))
-            {
-                Console.WriteLine($"square is {SquareFinder.SquareFinder.FindSquare(typeof(MockTriangle), side1, side2, side3)}");
-            }
+        }
+
+        private static Type GetTypeByName(string name)
+        {
+            return
+                AppDomain.CurrentDomain.GetAssemblies()
+                    .Reverse()
+                    .Select(assembly => assembly.GetType(name))
+                    .FirstOrDefault(t => t != null)
+                ??
+                AppDomain.CurrentDomain.GetAssemblies()
+                    .Reverse()
+                    .SelectMany(assembly => assembly.GetTypes())
+                    .FirstOrDefault(t => t.Name.Contains(name));
         }
     }
 }
