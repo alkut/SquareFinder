@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareFinder", "SquareFinde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EAB5DFF6-742C-4906-88A2-3986E51A0C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunTime", "RunTime\RunTime.csproj", "{F5CC77CB-52EB-479E-B5FD-D0A6DE25D2EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{EAB5DFF6-742C-4906-88A2-3986E51A0C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAB5DFF6-742C-4906-88A2-3986E51A0C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAB5DFF6-742C-4906-88A2-3986E51A0C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5CC77CB-52EB-479E-B5FD-D0A6DE25D2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CC77CB-52EB-479E-B5FD-D0A6DE25D2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CC77CB-52EB-479E-B5FD-D0A6DE25D2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CC77CB-52EB-479E-B5FD-D0A6DE25D2EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

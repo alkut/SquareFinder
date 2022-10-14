@@ -1,5 +1,4 @@
 USE TestDB;
-GO;
 
 CREATE TABLE Products (
                           id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,

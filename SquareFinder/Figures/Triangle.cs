@@ -55,7 +55,7 @@ namespace SquareFinder.Figures
         /// triangle is right iff a^2 + b^2 = c^2 where c is the greatest side - according to the law of cosines
         /// </summary>
         /// <returns></returns>
-        public bool Is_Right()
+        public bool IsRight()
         {
             return Math.Abs(_a * _a + _b * _b - _c * _c) < MachineEpsilon;
         }
